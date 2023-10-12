@@ -1,0 +1,24 @@
+const fs = require('fs')
+const chalk = require('chalk')
+// EDIT DISINI
+global.owner = ['6285727204303'] // no own
+global.packname = '© FNS-BoTzz' // nama pack sticker
+global.author = 'FNS OFFC'// nama author 
+global.own = 'FNS OFFC' //nama lu
+global.bot = 'FNS BoTzz'//nama bot
+
+global.qrisdana = { url: 'https://ibb.co/64byPff'}
+global.qrisgopay = { url: 'https://ibb.co/64byPff'}
+global.jasapanel = { url: 'https://ibb.co/64byPff'}
+global.menu = { url: 'https://ibb.co/64byPff'}
+global.anjay = { url: 'https://ibb.co/64byPff'}
+global.qrisallpay = { url: 'https://ibb.co/64byPff' } //Gak Usah Di Ganti
+
+let file = require.resolve(__filename)
+fs.watchFile(file, () => {
+fs.unwatchFile(file)
+console.log(chalk.yellowBright(`Update File Terbaru ${__filename}`))
+delete require.cache[file]
+require(file)
+})
+
